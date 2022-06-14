@@ -28,10 +28,10 @@ export const cancelRockets = (id) => ({ type: CANCEL_RESERVE, id });
 export const reserveRockets = (id) => ({ type: RESERVE_ROCKETS, id });
 
 const changeReserved = (state, action, reserved) => [...state].map((rocket) => {
-  if (action.id === rocket.id) {
-    return { ...rocket, reserved };
+  if (action.id !== rocket.id) {
+    return rocket;
   }
-  return rocket;
+  return { ...rocket, reserved };
 });
 
 const reducer = (state = initialState, action) => {
