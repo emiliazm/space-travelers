@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import Mission from './Mission';
 import missionsFetch from '../../redux/missions/missionsFetch';
-import './missions.css';
+import './Missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionsReducer);
