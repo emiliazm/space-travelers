@@ -14,6 +14,7 @@ function RocketsList() {
             rocketName={rocket.rocketName}
             description={rocket.description}
             flickrImages={rocket.flickrImages}
+            reserved={rocket.reserved}
           />
         ))}
       </ul>

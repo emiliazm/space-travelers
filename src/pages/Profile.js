@@ -1,5 +1,5 @@
 import React from 'react';
-import MyProfile from '../components/Profile/profile';
+import MyProfile from '../components/profile/profile';
 
 const ProfilePage = () => (
   <div className="container">

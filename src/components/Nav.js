@@ -10,7 +10,7 @@ function Nav() {
       <ul className="nav-ul">
         <li className="nav-li">
           <Link to="/">
-            Rockest
+            Rockets
           </Link>
         </li>
         <li className="nav-li">
