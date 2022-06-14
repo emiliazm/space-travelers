@@ -6,17 +6,19 @@ import {
   Navigate,
 } from 'react-router-dom';
 import Nav from './components/Nav';
-import Rockets from './pages/Rockets';
+import RocketPage from './pages/Rockets';
+import MyProfile from './components/Profile/profile';
+import MissionPage from './pages/Missions';
 
 function App() {
   return (
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Rockets />} />
+        <Route path="/" element={<RocketPage />} />
         <Route path="*" element={<Navigate to="/" />} />
-        {/* <Route path="/Missions" element={<Missions />} />
-        <Route path="/myProfile" element={<miPorfile />} /> */}
+        <Route path="/Missions" element={<MissionPage />} />
+        <Route path="/myProfile" element={<MyProfile />} />
       </Routes>
     </Router>
   );
