@@ -1,9 +1,8 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import ReservedRockets from './ReservedRockest';
 
 function MyProfile() {
-  const missions = useSelector((state) => state.missionsReducer);
+  const missions = useSelector((state) => state.missions);
   return (
     <div className="container">
       <section className="missions">

@@ -1,12 +1,12 @@
-import { React, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import Mission from './Mission';
 import missionsFetch from '../../redux/missions/missionsFetch';
+import Mission from './Mission';
 import './Missions.css';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missionsReducer);
+  const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => { dispatch(missionsFetch()); }, []);

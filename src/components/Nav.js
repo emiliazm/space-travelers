@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import planetColors from '../images/planetColors.png';
 
@@ -10,12 +9,13 @@ function Nav() {
       <ul className="nav-ul">
         <li className="nav-li">
           <Link to="/">
-            Rockets
+            Rockest
           </Link>
         </li>
         <li className="nav-li">
-          <Link to="/missions" />
-          Missions
+          <Link to="/missions">
+            Missions
+          </Link>
         </li>
         <li className="nav-li">
           <Link to="/myProfile">
