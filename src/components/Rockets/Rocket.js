@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux/es/exports';
 import { cancelRockets, reserveRockets } from '../../redux/rockets.js/rockets';
+import './Rockets.css';
 
 const Rocket = (props) => {
   const {
@@ -15,23 +16,24 @@ const Rocket = (props) => {
 
   return (
     <li className="rocket-container" id={id}>
-      <div>
+      <div className="img-container">
         <img src={flickrImages} alt="logo" />
       </div>
-      <div>
+      <div className="info-container">
         <h2>{rocketName}</h2>
-        <div>
-          {reserved && (<span>Reserved</span>)}
+        <div className="description">
+          {reserved && (<span className="badge">Reserved</span>)}
+          <span> </span>
           {description}
         </div>
-      </div>
-      <div>
-        {reserved && (
-          <button onClick={() => { cancelHandler(); }} className="rocket-cancel" type="button">Cancel Reservation</button>
-        )}
-        {!reserved && (
-          <button onClick={() => { reserveHandler(); }} className="rocket-reserve" type="button">Reserve Rocket</button>
-        )}
+        <div>
+          {reserved && (
+            <button onClick={() => { cancelHandler(); }} className="rocket-cancel" type="button">Cancel Reservation</button>
+          )}
+          {!reserved && (
+            <button onClick={() => { reserveHandler(); }} className="rocket-reserve" type="button">Reserve Rocket</button>
+          )}
+        </div>
       </div>
     </li>
   );

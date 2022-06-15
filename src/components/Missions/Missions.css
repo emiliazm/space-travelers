@@ -10,10 +10,6 @@
   border-collapse: collapse;
 }
 
-tbody > :nth-child(2n) {
-  background-color: rgba(196, 196, 196, 0.349);
-}
-
 tr,
 th {
   border: 2px solid #7e7e7e;
