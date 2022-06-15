@@ -1,6 +1,6 @@
 {
   "name": "space-travelers",
-  "homepage": ".",
+  "homepage": "http://.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,6 +28,11 @@
     "stylelint": "npx stylelint **/*.{css,scss}",
     "eslint": "npx eslint --fix ."
   },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -50,6 +55,7 @@
     "@babel/core": "^7.18.5",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-syntax-jsx": "^7.17.12",
+    "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -58,9 +64,22 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "gh-pages": "^4.0.0",
+    "jest": "^28.1.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emiliazm/space-travelers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emiliazm/space-travelers/issues"
   }
 }
