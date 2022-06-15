@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import missionsFetch from '../../redux/missions/missionsFetch';
 import Mission from './Mission';
 import './Missions.css';
@@ -9,7 +8,11 @@ const Missions = () => {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
-  useEffect(() => { dispatch(missionsFetch()); }, []);
+  useEffect(() => {
+    if (!missions.length) {
+      dispatch(missionsFetch());
+    }
+  }, []);
 
   return (
     <div className="container">
@@ -24,10 +27,10 @@ const Missions = () => {
           {missions.map(
             (mission) => (
               <Mission
-                key={uuidv4()}
-                mission_name={mission.mission_name}
+                key={mission.missionId}
+                missionName={mission.missionName}
                 description={mission.description}
-                mission_id={mission.mission_id}
+                missionId={mission.missionId}
                 reserved={mission.reserved}
               />
             ),
