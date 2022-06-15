@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
 import planetColors from '../images/planetColors.png';
+import './Nav.css';
 
 function Nav() {
   return (
     <nav>
-      <img className="nav-logo" src={planetColors} alt="logo" />
-      <h1 className="nav-h1">Space Travelers Hub</h1>
+      <div className="logo-conatiner">
+        <img className="nav-logo" src={planetColors} alt="logo" />
+        <h1 className="nav-h1">Space Travelers Hub</h1>
+      </div>
       <ul className="nav-ul">
         <li className="nav-li">
           <Link to="/">
@@ -17,6 +20,7 @@ function Nav() {
             Missions
           </Link>
         </li>
+        <span>|</span>
         <li className="nav-li">
           <Link to="/myProfile">
             My profile

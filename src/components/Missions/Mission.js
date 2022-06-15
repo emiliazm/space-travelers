@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../../redux/missions/missionsReducer';
 import './Mission.css';
 
-const Mission = (mission) => {
+const Mission = (props) => {
   const {
-    reserved, mission_id: missionId, mission_name: missionName, description,
-  } = mission;
+    reserved, missionId, missionName, description,
+  } = props;
 
   const dispatch = useDispatch();
 
@@ -37,6 +38,17 @@ const Mission = (mission) => {
         )}
     </tr>
   );
+};
+
+Mission.propTypes = {
+  missionId: PropTypes.string.isRequired,
+  missionName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool,
+};
+
+Mission.defaultProps = {
+  reserved: false,
 };
 
 export default Mission;

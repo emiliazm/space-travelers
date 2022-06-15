@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .container {
-  width: 90%;
   margin: 2rem auto;
   font-family: 'Roboto', sans-serif;
 }
@@ -9,10 +8,6 @@
 .table {
   border: 2px solid #7e7e7e;
   border-collapse: collapse;
-}
-
-tbody > :nth-child(2n) {
-  background-color: rgba(196, 196, 196, 0.349);
 }
 
 tr,

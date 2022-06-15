@@ -4,9 +4,23 @@ const URL = 'https://api.spacexdata.com/v3/missions';
 
 const missionsFetch = () => async (dispatch) => {
   const res = await fetch(URL);
-  const missions = await res.json();
+  const missionsArray = await res.json();
 
-  dispatch(getMissions(missions.slice(0, 4)));
+  const missions = missionsArray.map((mission) => {
+    const {
+      mission_id: missionId,
+      mission_name: missionName,
+      description,
+    } = mission;
+    return {
+      missionId,
+      missionName,
+      description,
+      reserved: false,
+    };
+  });
+
+  dispatch(getMissions(missions));
 };
 
 export default missionsFetch;

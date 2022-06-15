@@ -1,14 +1,15 @@
 import { useSelector } from 'react-redux/es/exports';
+import './Reserved.css';
 
 export default function ReservedRockets() {
   const rockets = useSelector((state) => state.rockets);
   const bookedRockets = rockets.filter((rocket) => rocket.reserved);
   if (bookedRockets.length !== 0) {
     return (
-      <div>
+      <div className="reserved-container">
         {bookedRockets.map((rocket) => (
-          <ul key={rocket.id}>
-            <li>{rocket.rocketName}</li>
+          <ul className="ul-container" key={rocket.id}>
+            <li className="rocket-li">{rocket.rocketName}</li>
           </ul>
         ))}
       </div>

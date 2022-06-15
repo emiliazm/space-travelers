@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Rocket from './Rocket';
+import './Rockets.css';
 
 function RocketsList() {
   const rockets = useSelector((state) => state.rockets);
   return (
-    <div>
+    <div className="rockets-container">
       <ul className="rockets-ul-container">
         {rockets.map((rocket) => (
           <Rocket

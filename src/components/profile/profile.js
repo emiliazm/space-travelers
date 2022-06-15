@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import ReservedRockets from './ReservedRockest';
+import './Profile.css';
 
 function MyProfile() {
   const missions = useSelector((state) => state.missions);
@@ -13,14 +14,14 @@ function MyProfile() {
               && missions
                 .filter((mission) => mission.reserved === true)
                 .map((reserve) => (
-                  <tr className="row" key={reserve.mission_id}>
-                    <td>{reserve.mission_name}</td>
+                  <tr className="row" key={reserve.missionId}>
+                    <td>{reserve.missionName}</td>
                   </tr>
                 ))}
           </tbody>
         </table>
       </section>
-      <section>
+      <section className="rockets">
         <h2>My Rockets</h2>
         <ReservedRockets />
       </section>

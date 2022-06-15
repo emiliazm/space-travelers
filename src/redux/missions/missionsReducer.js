@@ -21,7 +21,7 @@ export const leaveMission = (id) => ({
 
 export const joinMissionAction = (missions, id) => {
   const newState = missions.map((mission) => {
-    if (mission.mission_id !== id) {
+    if (mission.missionId !== id) {
       return mission;
     }
     return { ...mission, reserved: true };
@@ -31,7 +31,7 @@ export const joinMissionAction = (missions, id) => {
 
 export const leaveMissionAction = (missions, id) => {
   const newState = missions.map((mission) => {
-    if (mission.mission_id !== id) {
+    if (mission.missionId !== id) {
       return mission;
     }
     return { ...mission, reserved: false };
@@ -41,12 +41,15 @@ export const leaveMissionAction = (missions, id) => {
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_MISSIONS:
-      return [...action.payload];
-    case JOIN_MISSION:
-      return joinMissionAction(state, action.payload);
     case LEAVE_MISSION:
       return leaveMissionAction(state, action.payload);
+
+    case GET_MISSIONS:
+      return [...action.payload];
+
+    case JOIN_MISSION:
+      return joinMissionAction(state, action.payload);
+
     default:
       return state;
   }
