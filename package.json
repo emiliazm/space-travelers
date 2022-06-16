@@ -26,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "stylelint": "npx stylelint **/*.{css,scss}",
-    "eslint": "npx eslint --fix ."
+    "eslint": "npx eslint --fix .",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
