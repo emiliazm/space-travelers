@@ -71,7 +71,7 @@ const rockets = useSelector(state => state.rockets);`
 
 ## Live Demo
 
-No deployment yet.
+[Live Demo](https://emiliazm.github.io/space-travelers/)
 
 ### Prerequisites
 
