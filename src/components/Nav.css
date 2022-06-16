@@ -23,12 +23,12 @@ nav {
   gap: 8px;
 }
 
-.nav-ul a {
+.nav-link {
   font-size: 13px;
   text-decoration: none;
   color: rgb(8, 133, 206);
 }
 
-.nav-ul a:focus {
+.activated {
   text-decoration: underline;
 }

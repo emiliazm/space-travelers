@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import planetColors from '../images/planetColors.png';
 import './Nav.css';
 
 function Nav() {
+  const activeLink = ({ isActive }) => `nav-link${(isActive ? ' activated' : '')}`;
+
   return (
     <nav>
       <div className="logo-conatiner">
@@ -11,20 +13,20 @@ function Nav() {
       </div>
       <ul className="nav-ul">
         <li className="nav-li">
-          <Link to="/">
-            Rockest
-          </Link>
+          <NavLink to="/" className={activeLink}>
+            Rockets
+          </NavLink>
         </li>
         <li className="nav-li">
-          <Link to="/missions">
+          <NavLink to="/missions" className={activeLink}>
             Missions
-          </Link>
+          </NavLink>
         </li>
         <span>|</span>
         <li className="nav-li">
-          <Link to="/myProfile">
+          <NavLink to="/myProfile" className={activeLink}>
             My profile
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
