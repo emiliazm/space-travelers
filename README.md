@@ -90,7 +90,7 @@ const rockets = useSelector(state => state.rockets);`
 
 ### Usage
 
-- Clone the repository using `git clone https://github.com/Hombre2014/space-travelers`
+- Clone the repository using `git clone https://github.com/emiliazm/space-travelers.git`
 - Change directory into the project folder: `cd space-travelers`
 - Run `npm install`
 - Run `npm start`
